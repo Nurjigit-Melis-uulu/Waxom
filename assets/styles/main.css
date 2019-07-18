@@ -1,0 +1,99 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+
+nav .nav_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 1175px;
+  height: 95px;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  font-weight: 350;
+  position: relative;
+}
+
+nav .nav_links {
+  display: flex;
+}
+
+nav .nav_tools {
+  margin-left: 29px;
+  width: 71px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-right: 36px;
+  width: 636px;
+  justify-content: space-between
+}
+
+nav li {
+  margin-right: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #A19388;
+}
+
+nav .back-drop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+}
+
+nav button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  display: none;
+}
+
+nav button .line {
+  width: 100%;
+  height: 3px;
+  background: rgb(255, 255, 255);
+  display: block;
+  margin: 5px 0;
+}
