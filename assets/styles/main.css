@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+:root {
+  --main-color: #BEA691;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -62,7 +66,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #A19388;
+  color: var(--main-color);
 }
 
 nav .back-drop {
@@ -77,8 +81,9 @@ nav .back-drop {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  position: relative;
 }
 
 nav button {
@@ -96,4 +101,102 @@ nav button .line {
   background: rgb(255, 255, 255);
   display: block;
   margin: 5px 0;
+}
+
+.slides div[class^="slide-"] {
+  width: 100%;
+  height: 100vh;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.slide-1 {
+  background-image: url(../images/carousel/rob-bates-OtX_kQgY_O8-unsplash.jpg);
+}
+
+.carousel_controls {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 49;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.side_btn {
+  width: 60px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.side_btn:hover {
+  background: radial-gradient(circle farthest-side at center center, rgba(0, 0, 0, 0.246), rgba(0, 0, 0, 0));
+}
+
+.pointers {
+  display: flex;
+  align-items: center;
+  margin: 0 0 30px;
+}
+
+.pointers button {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  margin: 0 2px;
+}
+
+.pointers button.active {
+  background: transparent;
+  width: 22px;
+  height: 22px;
+  border: 2px solid white;
+}
+
+.slides {
+  color: white;
+}
+
+.slides h2 {
+  font-size: 2.2em;
+}
+
+.slide_title {
+  font-weight: bold;
+  font-size: 3.35em;
+}
+
+.slides div[class^="slide-"] article {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 60px;
+}
+
+.btn {
+  padding: 18px 40px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: var(--main-color);
+  border: none;
+  border-bottom: 3px solid #6B6157;
+  color: white;
+  position: relative;
+  outline: none;
+  z-index: 52;
+}
+
+.btn:hover {
+  background: #000;
 }
