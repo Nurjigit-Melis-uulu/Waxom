@@ -157,6 +157,10 @@ nav button .line {
   background: radial-gradient(circle farthest-side at center center, rgba(0, 0, 0, 0.246), rgba(0, 0, 0, 0));
 }
 
+.side_btn:disabled {
+  opacity: .1;
+}
+
 .pointers {
   display: flex;
   align-items: center;
