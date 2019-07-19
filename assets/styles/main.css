@@ -125,6 +125,14 @@ nav button .line {
   background-image: url(../images/carousel/carl-nenzen-loven-XVTHA2btDnE-unsplash.jpg);
 }
 
+.slide-4 {
+  background-image: url(../images/carousel/sheng-li-q2dUSl9S4Xg-unsplash.jpg);
+}
+
+.slide-5 {
+  background-image: url(../images/carousel/diego-vicente-jLygxLsNVgI-unsplash.jpg);
+}
+
 .carousel_controls {
   position: absolute;
   left: 0;
