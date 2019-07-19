@@ -1,6 +1,25 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
+}
+
+p {
+  color: #818181;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #565656;
+}
+
+@media (max-width: 1200px) {
+  body nav {
+    display: none;
+  }
 }
 
 :root {
@@ -80,13 +99,6 @@ nav .back-drop {
   z-index: 3;
 }
 
-header {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background: #000;
-}
-
 nav button {
   width: 40px;
   height: 40px;
@@ -102,6 +114,19 @@ nav button .line {
   background: rgb(255, 255, 255);
   display: block;
   margin: 5px 0;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #000;
+  color: white;
+}
+
+header h2,
+header p {
+  color: white;
 }
 
 .slides div[class^="slide-"] {
@@ -216,4 +241,65 @@ nav button .line {
   position: relative;
   outline: none;
   z-index: 52;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features {
+  text-align: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  padding: 90px 0;
+}
+
+.feature {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 25%;
+  min-width: 240px;
+  box-sizing: border-box;
+  padding: 0 5px;
+  margin: 0 0 20px;
+  color: #565656;
+}
+
+.feature i {
+  font-size: 2.6em;
+}
+
+.feature h2 {
+  font-weight: 500;
+}
+
+.feature span {
+  width: 70px;
+  height: 3px;
+  display: block;
+  margin: 0 auto;
+  background: rgb(239, 238, 236);
+}
+
+.feature p {
+  font-size: 14px;
+}
+
+
+.feature:hover p,
+.feature:hover h2,
+.feature:hover i {
+  color: #C6AF95;
+}
+
+.feature:hover span {
+  background: #C6AF95;
+}
+
+.ideas {
+  background: #FBFAF8;
 }

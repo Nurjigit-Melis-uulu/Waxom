@@ -10,7 +10,7 @@ for (let i = 0; i < pointers.length; i++) {
       element.className = "";
     });
     this.className = "active";
-    activationSlide();
+    activationButtons();
   });
 }
 
