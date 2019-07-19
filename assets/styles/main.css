@@ -117,6 +117,10 @@ nav button .line {
   background-image: url(../images/carousel/rob-bates-OtX_kQgY_O8-unsplash.jpg);
 }
 
+.slide-2 {
+  background-image: url(../images/carousel/james-eades-pMvIjMu9HSM-unsplash.jpg);
+}
+
 .carousel_controls {
   position: absolute;
   left: 0;
@@ -196,8 +200,4 @@ nav button .line {
   position: relative;
   outline: none;
   z-index: 52;
-}
-
-.btn:hover {
-  background: #000;
 }
