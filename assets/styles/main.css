@@ -121,6 +121,10 @@ nav button .line {
   background-image: url(../images/carousel/james-eades-pMvIjMu9HSM-unsplash.jpg);
 }
 
+.slide-3 {
+  background-image: url(../images/carousel/carl-nenzen-loven-XVTHA2btDnE-unsplash.jpg);
+}
+
 .carousel_controls {
   position: absolute;
   left: 0;
