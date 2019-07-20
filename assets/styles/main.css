@@ -4,12 +4,12 @@ body {
 }
 
 a {
-  color: var(--main-color);
+  color: var(--link-color);
   text-decoration: none;
 }
 
 p {
-  color: #818181;
+  color: var(--main-color);
 }
 
 h1,
@@ -27,8 +27,13 @@ h6 {
   }
 }
 
+button {
+  outline: none;
+}
+
 :root {
-  --main-color: #BEA691;
+  --link-color: #BEA691;
+  --main-color: #818181;
 }
 
 nav {
@@ -90,7 +95,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--main-color);
+  color: var(--link-color);
 }
 
 nav .back-drop {
@@ -239,12 +244,11 @@ header p {
   border-radius: 6px;
   text-transform: uppercase;
   font-weight: bold;
-  background: var(--main-color);
+  background: var(--link-color);
   border: none;
   border-bottom: 3px solid #6B6157;
   color: white;
   position: relative;
-  outline: none;
   z-index: 52;
 }
 
@@ -308,8 +312,11 @@ header p {
 }
 
 section {
-  background: #FBFAF8;
   padding: 45px 0 0;
+}
+
+.ideas {
+  background: #FBFAF8;
 }
 
 article {
@@ -346,22 +353,102 @@ article p {
   color: white;
 }
 
+.project_controls {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
 
 .project_controls button {
-  border: none;
+  border: 1px solid gainsboro;
   background: transparent;
-  color: #9B9B9B;
-  padding: 6px;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  margin: 0 10px;
+  color: var(--main-color);
+  padding: 6px 20px;
+  text-transform: capitalize;
+  font-weight: 545;
+  margin: 0 5px 10px;
 }
 
 .project_controls button.active {
-  color: #000;
+  color: #fff;
   font-weight: bold;
+  background: var(--link-color);
 }
 
 .project_controls button:hover {
-  color: rgb(100, 100, 100);
+  border: 1px solid var(--link-color);
+}
+
+.works_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-gap: 20px;
+}
+
+.work {
+  min-width: 280px;
+  width: 100%;
+  background: #FBFAF8;
+}
+
+.work_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.work_desc {
+  padding: 10px 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.work_desc::before {
+  content: "";
+  display: block;
+  border: 20px solid transparent;
+  border-bottom-color: #FBFAF8;
+  position: absolute;
+  left: 10px;
+  top: -40px;
+}
+
+.work_img {
+  width: 100%;
+  position: relative;
+}
+
+.work_links {
+  width: 100%;
+  height: 98.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.568);
+}
+
+.work_links a {
+  margin: 10px;
+  color: white;
+  font-size: 1.4em;
+}
+
+.work:hover {
+  background: #372F2D;
+}
+
+.work:hover .work_desc::before {
+  border-bottom-color: #372F2D;
+}
+
+.work:hover h3,
+.work:hover p {
+  color: white;
+}
+
+.work:hover .work_links {
+  visibility: visible;
 }
