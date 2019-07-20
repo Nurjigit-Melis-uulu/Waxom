@@ -4,8 +4,12 @@ body {
 }
 
 a {
-  color: var(--link-color);
+  color: white;
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-color);
 }
 
 p {
@@ -87,15 +91,6 @@ nav ul {
 
 nav li {
   margin-right: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: var(--link-color);
 }
 
 nav .back-drop {
@@ -383,6 +378,7 @@ article p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-gap: 20px;
+  margin: 40px 0;
 }
 
 .work {
@@ -432,7 +428,6 @@ article p {
 
 .work_links a {
   margin: 10px;
-  color: white;
   font-size: 1.4em;
 }
 
@@ -451,4 +446,9 @@ article p {
 
 .work:hover .work_links {
   visibility: visible;
+}
+
+#portfolio button.btn {
+  display: block;
+  margin: 0 auto;
 }
