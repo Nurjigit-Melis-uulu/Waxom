@@ -439,8 +439,11 @@ article p {
   border-bottom-color: #372F2D;
 }
 
-.work:hover h3,
 .work:hover p {
+  color: var(--link-color);
+}
+
+.work:hover h3 {
   color: white;
 }
 
