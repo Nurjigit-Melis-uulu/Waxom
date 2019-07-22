@@ -1,3 +1,4 @@
+// carousel elements
 let slides = document.querySelectorAll('.slides div[class^="slide-"]');
 let pointers = document.querySelectorAll(".pointers button");
 let sideButtons = document.querySelectorAll(".side_btn");
@@ -56,5 +57,51 @@ function activationSlide() {
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
     slides[activeSlide].style.display = "flex";
+  }
+}
+
+// statistic elements
+let statisticBox = document.querySelector(".statistic");
+let statValues = document.querySelectorAll(".stat_number");
+let startCount = false;
+let numberCount = 0;
+let elementCount = 0;
+
+document.addEventListener("scroll", function() {
+  if (
+    statisticBox.getBoundingClientRect().top <=
+    document.documentElement.clientHeight / 2
+  ) {
+    startCount = true;
+  } else {
+    console.log("bad");
+  }
+
+  if (startCount) {
+    for (let index = 0; index < statValues.length; index++) {
+      countStatistic(
+        statValues[elementCount],
+        statValues[elementCount].getAttribute("data-value"),
+        statValues.length
+      );
+    }
+  }
+});
+
+function countStatistic(element, value, length) {
+  if (numberCount < value) {
+    numberCount++;
+    element.innerHTML = numberCount.toFixed(0);
+
+    let timeOutLine = setTimeout(() => {
+      clearTimeout(timeOutLine);
+      countStatistic(element, value, length);
+    }, 100);
+  }
+
+  if (startCount) {
+    elementCount < length - 1
+      ? elementCount++
+      : ((elementCount = 0), (startCount = false));
   }
 }
