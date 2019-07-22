@@ -91,17 +91,17 @@ document.addEventListener("scroll", function() {
 function countStatistic(element, value, length) {
   if (numberCount < value) {
     numberCount++;
-    element.innerHTML = numberCount.toFixed(0);
+    element.innerHTML = numberCount;
+
+    if (startCount) {
+      elementCount < length - 1
+        ? elementCount++
+        : ((elementCount = 0), (startCount = false));
+    }
 
     let timeOutLine = setTimeout(() => {
       clearTimeout(timeOutLine);
       countStatistic(element, value, length);
     }, 100);
-  }
-
-  if (startCount) {
-    elementCount < length - 1
-      ? elementCount++
-      : ((elementCount = 0), (startCount = false));
   }
 }
