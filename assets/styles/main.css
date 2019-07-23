@@ -30,6 +30,7 @@ button {
 :root {
   --link-color: #BEA691;
   --main-color: #818181;
+  --carousel-width: 960px;
 }
 
 nav {
@@ -509,6 +510,85 @@ article p {
 
 .stat h5 {
   color: var(--link-color);
+}
+
+.carousel {
+  width: var(--carousel-width);
+  overflow: hidden;
+  margin: 75px auto 0;
+}
+
+.carousel_slides {
+  width: 960px;
+  display: flex;
+  transition: transform 1s;
+}
+
+.slide {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  min-width: 290px;
+  width: 30%;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.item-image {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.item-image img {
+  width: unset;
+  height: 100%;
+}
+
+.item-descrip {
+  line-height: 30px;
+}
+
+.item-descrip h4 {
+  text-transform: capitalize;
+  font-size: 1.5em;
+  margin: 30px 0;
+  font-family: "Amble Regular", sans-serif;
+}
+
+.carousel_controls_2 {
+  margin: 30px 0 0;
+}
+
+.carousel_controls_2 button {
+  width: 25px;
+  height: 35px;
+  padding: 0;
+  margin: 0 4px;
+  border-radius: 3px;
+  border: none;
+  background: rgb(200, 200, 200);
+  outline: none;
+}
+
+.carousel_controls_2 button:hover {
+  background: rgb(65, 65, 65);
+  color: white;
+}
+
+.carousel_controls_2 button:active {
+  background: rgb(195, 91, 22);
+}
+
+.carousel_controls_2 button.active {
+  background: black;
 }
 
 /*------------- @madia -------------*/

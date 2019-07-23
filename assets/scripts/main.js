@@ -1,8 +1,24 @@
-// carousel elements
+// header carousel elements
 let slides = document.querySelectorAll('.slides div[class^="slide-"]');
 let pointers = document.querySelectorAll(".pointers button");
 let sideButtons = document.querySelectorAll(".side_btn");
 let activeSlide = 0;
+
+// blog carousel elements
+let carouselButtons = document.querySelectorAll(".carousel_controls_2 button");
+let carouselSlides = document.querySelector(".carousel_slides");
+let carousel = document.querySelector(".carousel");
+let slideState = document.querySelector("#slide-state");
+let slideActiveNumber = 1;
+let carouselCount = 1;
+let carouselPos = 0;
+
+// statistic elements
+let statisticBox = document.querySelector(".statistic");
+let statValues = document.querySelectorAll(".stat_number");
+let startCount = false;
+let numberCount = 0;
+let elementCount = 0;
 
 for (let i = 0; i < pointers.length; i++) {
   pointers[i].addEventListener("click", function() {
@@ -60,13 +76,6 @@ function activationSlide() {
   }
 }
 
-// statistic elements
-let statisticBox = document.querySelector(".statistic");
-let statValues = document.querySelectorAll(".stat_number");
-let startCount = false;
-let numberCount = 0;
-let elementCount = 0;
-
 document.addEventListener("scroll", function() {
   if (
     statisticBox.getBoundingClientRect().top <=
@@ -105,3 +114,56 @@ function countStatistic(element, value, length) {
     }, 100);
   }
 }
+
+carouselButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    let carouselWidth = getComputedStyle(carousel).getPropertyValue(
+      "--carousel-width"
+    );
+
+    if (carouselWidth === " 960px") {
+      carouselWidth = 960;
+      carouselCount = 2;
+    } else if (carouselWidth === " 640px") {
+      carouselWidth = 640;
+      carouselCount = 3;
+    } else {
+      carouselWidth = 320;
+      carouselCount = 6;
+    }
+
+    if (
+      this.getAttribute("data-direction") === "right" &&
+      slideActiveNumber > 0 &&
+      slideActiveNumber < carouselCount + 1
+    ) {
+      slideActiveNumber++;
+      carouselPos += carouselWidth;
+      carouselSlides.style.transform = `translateX(-${carouselPos}px)`;
+    } else if (
+      this.getAttribute("data-direction") === "left" &&
+      slideActiveNumber <= carouselCount &&
+      slideActiveNumber > 0
+    ) {
+      slideActiveNumber--;
+      carouselPos -= carouselWidth;
+      carouselSlides.style.transform = `translateX(-${carouselPos}px)`;
+    }
+
+    if (slideActiveNumber < 1) {
+      slideActiveNumber = carouselCount;
+      carouselPos = carouselWidth * (carouselCount - 1);
+      carouselSlides.style.transform = `translateX(-${carouselPos}px)`;
+    }
+
+    if (slideActiveNumber > carouselCount) {
+      slideActiveNumber = 1;
+      carouselPos = 0;
+      carouselSlides.style.transform = `translateX(${carouselPos}px)`;
+    }
+
+    slideState.innerHTML = slideActiveNumber;
+
+    console.log(slideActiveNumber, carouselWidth, carouselCount, carouselPos);
+  });
+});
