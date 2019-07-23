@@ -610,27 +610,31 @@ article p {
 }
 
 .carousel_controls_2 {
+  display: flex;
+  justify-content: center;
   margin: 30px 0 0;
 }
 
 .carousel_controls_2 button {
   width: 25px;
-  height: 35px;
+  height: 25px;
   padding: 0;
   margin: 0 4px;
-  border-radius: 3px;
-  border: none;
-  background: rgb(200, 200, 200);
+  border-radius: 100%;
+  border: 2px solid var(--link-color);
+  color: var(--link-color);
+  background: transparent;
   outline: none;
 }
 
 .carousel_controls_2 button:hover {
-  background: rgb(65, 65, 65);
+  background: var(--link-color);
   color: white;
 }
 
 .carousel_controls_2 button:active {
-  background: rgb(195, 91, 22);
+  background: rgb(195, 149, 22);
+  border-color: rgb(195, 149, 22);
 }
 
 .carousel_controls_2 button.active {
