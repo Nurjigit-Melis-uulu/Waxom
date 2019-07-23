@@ -1,3 +1,3 @@
 # Waxom template
 
-deploy: https://www.waxom-sunday.netlify.com
+deploy: https://waxom-sunday.netlify.com/
