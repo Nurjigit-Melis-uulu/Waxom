@@ -450,6 +450,15 @@ article p {
   background-size: cover;
   display: flex;
   align-items: center;
+  color: white;
+}
+
+.video_present p {
+  color: white;
+}
+
+.video_present a {
+  font-size: 5em;
 }
 
 .mobile-devises article,
@@ -669,6 +678,7 @@ article p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 20px;
+  padding: 10px 0;
 }
 
 .contact_grid .logo {
