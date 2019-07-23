@@ -121,8 +121,8 @@ carouselButtons.forEach(button => {
       "--carousel-width"
     );
 
-    if (carouselWidth === " 960px") {
-      carouselWidth = 960;
+    if (carouselWidth === " 1200px") {
+      carouselWidth = 1200;
       carouselCount = 2;
     } else if (carouselWidth === " 640px") {
       carouselWidth = 640;
