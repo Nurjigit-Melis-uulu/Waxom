@@ -20,6 +20,33 @@ let startCount = false;
 let numberCount = 0;
 let elementCount = 0;
 
+// Elements of navigation
+const anchors = document.querySelectorAll('nav a[href*="#"]');
+let menuButton = document.querySelector("#menu-button");
+let backDrop = document.querySelector(".back-drop");
+let drawer = document.querySelector("#drawer");
+let strelka = document.querySelector(".strelka");
+let boll = false;
+
+backDrop.addEventListener("click", function() {
+  drawer.className = "";
+  backDrop.style.display = "none";
+  strelka.style.display = "none";
+});
+
+menuButton.addEventListener("click", function() {
+  boll = !boll;
+
+  if (boll) {
+    strelka.style.display = "block";
+    drawer.className = "active";
+    backDrop.style.display = "block";
+  } else {
+    drawer.className = "";
+    strelka.style.display = "none";
+  }
+});
+
 for (let i = 0; i < pointers.length; i++) {
   pointers[i].addEventListener("click", function() {
     activeSlide = i;
@@ -121,14 +148,14 @@ carouselButtons.forEach(button => {
       "--carousel-width"
     );
 
-    if (carouselWidth === " 1200px") {
-      carouselWidth = 1200;
+    if (carouselWidth === " 1160px") {
+      carouselWidth = 1160;
       carouselCount = 2;
-    } else if (carouselWidth === " 640px") {
-      carouselWidth = 640;
+    } else if (carouselWidth === " 773px") {
+      carouselWidth = 774;
       carouselCount = 3;
     } else {
-      carouselWidth = 320;
+      carouselWidth = 280;
       carouselCount = 6;
     }
 
@@ -167,3 +194,27 @@ carouselButtons.forEach(button => {
     console.log(slideActiveNumber, carouselWidth, carouselCount, carouselPos);
   });
 });
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    drawer.className = "";
+    backDrop.style.display = "none";
+    strelka.style.display = "none";
+
+    const blockID = anchor.getAttribute("href");
+
+    if (anchor.getAttribute("href") === "#") {
+      document.querySelector("body").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    } else {
+      document.querySelector("" + blockID).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
+}
