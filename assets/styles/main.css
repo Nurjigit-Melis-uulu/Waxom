@@ -245,6 +245,14 @@ header p {
   z-index: 52;
 }
 
+.btn:hover {
+  background: rgb(148, 111, 79);
+}
+
+.btn:active {
+  background: rgb(189, 112, 44);
+}
+
 .content {
   width: 100%;
   max-width: 1200px;
@@ -368,16 +376,32 @@ article p {
 }
 
 .works_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
   margin: 40px 0;
 }
 
 .work {
   min-width: 280px;
-  width: 100%;
   background: #FBFAF8;
+  margin: 5px;
+}
+
+div.hidden {
+  animation: hiddenWork 1s forwards;
+}
+
+@keyframes hiddenWork {
+  0% {}
+
+  100% {
+    min-width: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
 }
 
 .work_img img {
@@ -681,7 +705,7 @@ article p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
   grid-gap: 20px;
-  padding: 10px 0;
+  padding: 40px 0;
 }
 
 .dribbble_grid {
@@ -774,7 +798,7 @@ footer ul li {
     width: 200px;
     height: 0;
     position: absolute;
-    left: 8px;
+    left: -160px;
     top: 48px;
     background: white;
     padding: 0;

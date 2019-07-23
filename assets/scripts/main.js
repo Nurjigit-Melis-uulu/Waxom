@@ -4,6 +4,10 @@ let pointers = document.querySelectorAll(".pointers button");
 let sideButtons = document.querySelectorAll(".side_btn");
 let activeSlide = 0;
 
+// Elements of work page
+let categories = document.querySelectorAll(".project_controls button");
+let works = document.querySelectorAll(".work");
+
 // blog carousel elements
 let carouselButtons = document.querySelectorAll(".carousel_controls_2 button");
 let carouselSlides = document.querySelector(".carousel_slides");
@@ -218,3 +222,21 @@ for (let anchor of anchors) {
     }
   });
 }
+
+categories.forEach(category => {
+  category.addEventListener("click", function() {
+    categories.forEach(e => (e.className = ""));
+    this.className = "active";
+
+    works.forEach(work => {
+      if (work.className !== "work hidden") {
+        work.className = "work hidden";
+      }
+      if (work.getAttribute("data-category") === category.value) {
+        work.className = "work";
+      } else if (category.value === "all") {
+        work.className = "work";
+      }
+    });
+  });
+});
