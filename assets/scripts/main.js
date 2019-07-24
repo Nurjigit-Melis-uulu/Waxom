@@ -129,6 +129,10 @@ document.addEventListener("scroll", function() {
 });
 
 function countStatistic(element, value, length) {
+  let countSpeed = 100;
+
+  value > 2000 ? (countSpeed = 1) : (countSpeed = 100);
+
   if (numberCount < value) {
     numberCount++;
     element.innerHTML = numberCount;
@@ -142,7 +146,7 @@ function countStatistic(element, value, length) {
     let timeOutLine = setTimeout(() => {
       clearTimeout(timeOutLine);
       countStatistic(element, value, length);
-    }, 100);
+    }, countSpeed);
   }
 }
 
