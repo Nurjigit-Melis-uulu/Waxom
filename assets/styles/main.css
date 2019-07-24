@@ -123,6 +123,25 @@ nav .strelka {
   z-index: 9;
 }
 
+nav .up {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background: #000;
+  color: white;
+  opacity: .3;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+nav .up:hover {
+  opacity: 1;
+}
+
 header {
   width: 100%;
   height: 100vh;
@@ -820,7 +839,7 @@ footer ul li {
     align-items: center;
     transition: all .4s ease-out;
     overflow: hidden;
-    z-index: 9;
+    z-index: 54;
   }
 
   nav .strelka {
@@ -839,16 +858,23 @@ footer ul li {
     box-shadow: 0 0 10px rgba(0, 0, 0, .4);
   }
 
+  nav li a:hover {
+    background: rgb(202, 231, 241);
+  }
+
   nav li {
     width: 100%;
+    height: 30px;
   }
 
   nav li a {
     display: block;
     width: 100%;
-    margin: 5px 0;
+    height: 100%;
     color: black;
     text-align: center;
+    line-height: 30px;
+    font-weight: bold;
   }
 }
 
