@@ -31,6 +31,10 @@ button {
   --carousel-width: 1160px;
 }
 
+h2 {
+  font-size: 1.9em;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -321,6 +325,7 @@ header p {
 
 .feature h2 {
   font-weight: 500;
+  font-size: 1.5em;
   margin: 0;
 }
 
@@ -356,10 +361,6 @@ section {
   background: #FBFAF8;
 }
 
-.ideas h2 {
-  font-size: 2em;
-}
-
 article {
   width: 100%;
   max-width: 765px;
@@ -380,10 +381,19 @@ article p {
 
 .rate {
   background: linear-gradient(to right, #251D1B, #493125);
-  padding: 25px 0;
+  padding: 0;
+}
+
+.rate h2 {
+  margin: 0;
+}
+
+.rate p {
+  margin: 5px 0;
 }
 
 .rate .content {
+  min-height: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
