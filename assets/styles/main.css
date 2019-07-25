@@ -82,6 +82,7 @@ nav ul {
 
 nav li {
   margin-right: 0;
+  font-size: .9em;
 }
 
 nav .back-drop {
@@ -158,10 +159,11 @@ header p {
 .read_more {
   display: flex;
   align-items: center;
+
 }
 
 .read_more i {
-  margin: 0 0 0 5px;
+  margin: 2px 0 0px 5px;
 }
 
 .slides div[class^="slide-"] {
@@ -299,7 +301,7 @@ header p {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  padding: 90px 0;
+  padding: 19px 0 85px;
 }
 
 .feature {
@@ -310,27 +312,29 @@ header p {
   min-width: 240px;
   box-sizing: border-box;
   padding: 0 5px;
-  margin: 0 0 20px;
 }
 
 .feature i {
-  font-size: 2.6em;
+  font-size: 2.8em;
+  margin: 20px 0;
 }
 
 .feature h2 {
   font-weight: 500;
+  margin: 0;
 }
 
 .feature span {
   width: 70px;
   height: 3px;
   display: block;
-  margin: 0 auto;
+  margin: 5px auto 0;
   background: rgb(239, 238, 236);
 }
 
 .feature p {
   font-size: 14px;
+  line-height: 25px;
 }
 
 
@@ -350,6 +354,10 @@ section {
 
 .ideas {
   background: #FBFAF8;
+}
+
+.ideas h2 {
+  font-size: 2em;
 }
 
 article {
@@ -372,7 +380,7 @@ article p {
 
 .rate {
   background: linear-gradient(to right, #251D1B, #493125);
-  padding: 10px 0;
+  padding: 25px 0;
 }
 
 .rate .content {
