@@ -231,20 +231,13 @@ header p {
 }
 
 .side_btn {
-  width: 60px;
+  width: 100px;
   height: 100px;
   margin: auto 0;
   border: none;
+  border-radius: 100%;
   background: transparent;
   outline: none;
-}
-
-.side_btn:hover {
-  background: radial-gradient(circle farthest-side at center center, rgba(0, 0, 0, 0.246), rgba(0, 0, 0, 0));
-}
-
-.side_btn:disabled {
-  opacity: .1;
 }
 
 .pointers {
